@@ -146,21 +146,25 @@ function displayStudents() {
   students.forEach(function (student) {
     const tr = document.createElement("tr");
 
-    // Highlight Above Average
+    let remark = "Below average";
+
+    // HIGHLIGHT + REMARK LOGIC
     if (student.grade > avg) {
       tr.style.backgroundColor = "lightgreen";
       tr.style.fontWeight = "bold";
+      remark = "Above average";
     }
 
     tr.innerHTML = `
-      <td>${student.name}</td>
-      <td>${student.grade}</td>
-      <td>
-        <button onclick="deleteStudent(${student.id})">
-          Delete
-        </button>
-      </td>
-    `;
+    <td>${student.name}</td>
+    <td>${student.grade}</td>
+    <td>${remark}</td>
+    <td>
+      <button onclick="deleteStudent(${student.id})">
+        Delete
+      </button>
+    </td>
+  `;
 
     studentList.appendChild(tr);
   });
