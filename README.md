@@ -1,0 +1,1 @@
+A simple Student Grade Tracker built using JavaScript, focusing on data structures (arrays and objects), DOM manipulation, and event handling. The application allows users to add, display, and manage student grades while automatically calculating the average score. Data is persisted using localStorage to ensure records remain after page reload.
